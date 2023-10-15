@@ -7,32 +7,34 @@ The main goal of this project is to build a web-service that alows us to take a 
 
 ## Prepare system
 
-At the first step I want to explain to you how to prepare your system for launching.
-If you have processing PGADMIN or Postgresql-server you have to stop them both to clear necessary ports (such as 80 and 5432 which are used by both services).
+At the first step prepare your system for launching.
+If you have processing PGADMIN or Postgresql-server you have to stop them both to clear necessary ports (such as 80 and 5432 which are used by both containers).
 
-You can ask me how, it's simply:
- - open your terminal (if you use ubuntu or another lunix-based OS);
- - insert next command 'sudo systemctl stop [name_of_service]'.
+* open your terminal (if you use ubuntu or another lunix-based OS);
+* insert next command 'sudo systemctl stop [name_of_service]'.
  
- If you're Windows user try Google-search.
 
 ## Up the container from .yaml
  
  Next step - come into project-file and insert command for docker-compose:
- 	- docker compose up
- 	- enjoy
+ 	* docker compose up
  	
 P.S.
-	To check up your database I added PGADMIN into this service:
-	- email: test@gmail.com
-	- password: 1234
+	To check up your database I added PGADMIN into this service
+ 	Data for verification:
+	* email: test@gmail.com
+	* password: 1234
 	
 Then register your server:
-	- choose name of server by yourself (maybe you choose something like unicorn :-) )
-	- host name/address - 172.18.0.2
- 
-		or something else - you can find it in docker-destop or by teminal
+	* choose name of server by yourself. Name is not imoprtant;
+	* host name/address - 172.18.0.2;
+ 		or something else - you can find it in docker-destop or by teminal
 		using next comand 'docker inspect [name_of_container]' (advice get to the bottom)
+ 	* port - 5432;
+  	* password - 1234;
+   	* username - postgres.
+ 
+		
 
  Here's a set of configurations.
  
